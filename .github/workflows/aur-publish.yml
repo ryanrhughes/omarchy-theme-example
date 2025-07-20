@@ -32,6 +32,8 @@ jobs:
         with:
           pkgname: omarchy-theme-example
           pkgbuild: ./PKGBUILD
+          assets: |
+            omarchy-theme-example.install
           commit_username: ${{ secrets.AUR_USERNAME }}
           commit_email: ${{ secrets.AUR_EMAIL }}
           ssh_private_key: ${{ secrets.AUR_SSH_PRIVATE_KEY }}
