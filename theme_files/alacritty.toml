@@ -1,76 +1,77 @@
+# Synthwave Theme for Alacritty
+
 [colors.primary]
-background = "#24273a"
-foreground = "#cad3f5"
-dim_foreground = "#8087a2"
-bright_foreground = "#cad3f5"
+background = "#0a0a1a"
+foreground = "#00ffff"
+dim_foreground = "#00cccc"
+bright_foreground = "#00ffff"
 
 [colors.cursor]
-text = "#24273a"
-cursor = "#f4dbd6"
+text = "#0a0a1a"
+cursor = "#ff00ff"
 
 [colors.vi_mode_cursor]
-text = "#24273a"
-cursor = "#b7bdf8"
+text = "#0a0a1a"
+cursor = "#ffff00"
 
 [colors.search.matches]
-foreground = "#24273a"
-background = "#a5adcb"
+foreground = "#0a0a1a"
+background = "#ff006f"
 
 [colors.search.focused_match]
-foreground = "#24273a"
-background = "#a6da95"
+foreground = "#0a0a1a"
+background = "#00ff00"
 
 [colors.footer_bar]
-foreground = "#24273a"
-background = "#a5adcb"
+foreground = "#0a0a1a"
+background = "#ff00ff"
 
 [colors.hints.start]
-foreground = "#24273a"
-background = "#eed49f"
+foreground = "#0a0a1a"
+background = "#ffff00"
 
 [colors.hints.end]
-foreground = "#24273a"
-background = "#a5adcb"
+foreground = "#0a0a1a"
+background = "#ff006f"
 
 [colors.selection]
-text = "#24273a"
-background = "#f4dbd6"
+text = "#0a0a1a"
+background = "#ff00ff"
 
 [colors.normal]
-black = "#494d64"
-red = "#ed8796"
-green = "#a6da95"
-yellow = "#eed49f"
-blue = "#8aadf4"
-magenta = "#f5bde6"
-cyan = "#8bd5ca"
-white = "#b8c0e0"
+black = "#16213e"
+red = "#ff006f"
+green = "#00ff00"
+yellow = "#ffff00"
+blue = "#0080ff"
+magenta = "#ff00ff"
+cyan = "#00ffff"
+white = "#e0e0e0"
 
 [colors.bright]
-black = "#5b6078"
-red = "#ed8796"
-green = "#a6da95"
-yellow = "#eed49f"
-blue = "#8aadf4"
-magenta = "#f5bde6"
-cyan = "#8bd5ca"
-white = "#a5adcb"
+black = "#1f3a5f"
+red = "#ff3388"
+green = "#33ff33"
+yellow = "#ffff66"
+blue = "#3399ff"
+magenta = "#ff66ff"
+cyan = "#66ffff"
+white = "#ffffff"
 
 [colors.dim]
-black = "#494d64"
-red = "#ed8796"
-green = "#a6da95"
-yellow = "#eed49f"
-blue = "#8aadf4"
-magenta = "#f5bde6"
-cyan = "#8bd5ca"
-white = "#b8c0e0"
+black = "#0d1929"
+red = "#cc0056"
+green = "#00cc00"
+yellow = "#cccc00"
+blue = "#0066cc"
+magenta = "#cc00cc"
+cyan = "#00cccc"
+white = "#b0b0b0"
 
 [[colors.indexed_colors]]
 index = 16
-color = "#f5a97f"
+color = "#ff8800"
 
 [[colors.indexed_colors]]
 index = 17
-color = "#f4dbd6"
-
+color = "#ff00aa"

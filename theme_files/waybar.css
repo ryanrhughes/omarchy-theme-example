@@ -1,2 +1,53 @@
-@define-color foreground #cdd6f4;
-@define-color background #181824;
+/* Synthwave Theme for Waybar */
+@define-color foreground #00ffff;
+@define-color background #0a0a1a;
+@define-color accent #ff00ff;
+@define-color highlight #ff006f;
+@define-color urgent #ffff00;
+
+* {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 13px;
+}
+
+window#waybar {
+    background-color: @background;
+    border-bottom: 3px solid @accent;
+    color: @foreground;
+}
+
+#workspaces button {
+    background-color: transparent;
+    color: @foreground;
+    border-bottom: 3px solid transparent;
+}
+
+#workspaces button.active {
+    background-color: rgba(255, 0, 255, 0.2);
+    border-bottom: 3px solid @accent;
+}
+
+#workspaces button:hover {
+    background: rgba(0, 255, 255, 0.2);
+    border-bottom: 3px solid @foreground;
+}
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#custom-media,
+#tray,
+#mode,
+#idle_inhibitor,
+#mpd {
+    padding: 0 10px;
+    color: @foreground;
+    background-color: rgba(255, 0, 255, 0.1);
+    border-left: 3px solid @accent;
+}
