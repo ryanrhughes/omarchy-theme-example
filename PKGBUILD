@@ -1,10 +1,10 @@
-# Maintainer: Your Name <your.email@example.com>
+# Maintainer: Ryan Hughes <1630358+ryanrhughes@users.noreply.github.com>
 pkgname=omarchy-theme-example
 pkgver=1.0.0
 pkgrel=1
 pkgdesc="Example theme package for Omarchy"
 arch=('any')
-url="https://github.com/yourusername/omarchy-theme-example"
+url="https://github.com/ryanrhughes/omarchy-theme-example"
 license=('MIT')
 depends=()
 makedepends=()
@@ -23,4 +23,3 @@ package() {
   find "$pkgdir/usr/share/omarchy/themes/example" -type f -exec chmod 644 {} \;
   find "$pkgdir/usr/share/omarchy/themes/example" -type d -exec chmod 755 {} \;
 }
-

@@ -1,0 +1,10 @@
+# Makepkg generated files
+*.tar.gz
+*.tar.xz
+*.tar.zst
+pkg/
+src/
+
+# Backup files
+*~
+*.bak
