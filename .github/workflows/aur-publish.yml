@@ -1,0 +1,39 @@
+name: Publish to AUR
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  aur-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Update PKGBUILD version
+        run: |
+          # Extract version from tag (remove 'v' prefix)
+          VERSION=${GITHUB_REF#refs/tags/v}
+          
+          # Update pkgver in PKGBUILD
+          sed -i "s/^pkgver=.*/pkgver=$VERSION/" PKGBUILD
+          
+          # Reset pkgrel to 1 for new versions
+          sed -i "s/^pkgrel=.*/pkgrel=1/" PKGBUILD
+          
+          # Show the changes
+          echo "Updated PKGBUILD:"
+          grep -E "^pkg(ver|rel)=" PKGBUILD
+
+      - name: Publish AUR package
+        uses: KSXGitHub/github-actions-deploy-aur@v2.7.0
+        with:
+          pkgname: omarchy-theme-example
+          pkgbuild: ./PKGBUILD
+          commit_username: ${{ secrets.AUR_USERNAME }}
+          commit_email: ${{ secrets.AUR_EMAIL }}
+          ssh_private_key: ${{ secrets.AUR_SSH_PRIVATE_KEY }}
+          commit_message: Update to version ${{ github.ref_name }}
+          ssh_keyscan_types: rsa,ecdsa,ed25519
