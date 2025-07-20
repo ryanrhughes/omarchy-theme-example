@@ -1,0 +1,10 @@
+pkgbase = omarchy-theme-example
+	pkgdesc = Example theme package for Omarchy
+	pkgver = 1.0.0
+	pkgrel = 1
+	url = https://github.com/yourusername/omarchy-theme-example
+	install = omarchy-theme-example.install
+	arch = any
+	license = MIT
+
+pkgname = omarchy-theme-example

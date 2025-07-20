@@ -1,0 +1,39 @@
+post_install() {
+    echo "==> Creating symlinks for Omarchy Example Theme..."
+    
+    # Find users with omarchy themes directory
+    for homedir in /home/*; do
+        if [ -d "$homedir/.local/share/omarchy/themes" ]; then
+            username=$(basename "$homedir")
+            
+            # Create symlink to system theme
+            sudo -u "$username" ln -sf /usr/share/omarchy/themes/example "$homedir/.local/share/omarchy/themes/example"
+            
+            echo "==> Theme symlinked for user: $username"
+        fi
+    done
+    
+    echo "==> Omarchy Example Theme has been installed!"
+    echo "==> Theme location: ~/.local/share/omarchy/themes/example/"
+}
+
+post_upgrade() {
+    post_install
+}
+
+post_remove() {
+    echo "==> Removing Omarchy Example Theme symlinks..."
+    
+    # Remove symlinks
+    for homedir in /home/*; do
+        THEME_LINK="$homedir/.local/share/omarchy/themes/example"
+        
+        if [ -L "$THEME_LINK" ]; then
+            username=$(basename "$homedir")
+            rm -f "$THEME_LINK"
+            echo "==> Theme symlink removed for user: $username"
+        fi
+    done
+    
+    echo "==> Omarchy Example Theme has been removed!"
+}
